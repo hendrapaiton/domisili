@@ -32,3 +32,18 @@ class Kecamatan(ListAPIView):
             return queryset
         else:
             return self.queryset
+
+
+class Kelurahan(ListAPIView):
+    lookup_field = 'kode'
+    serializer_class = DaerahSerializer
+
+    def get_queryset(self):
+        prop = self.kwargs.get('prop')
+        kab = self.kwargs.get('kab')
+        kec = self.kwargs.get('kec')
+        if prop in kab and kab in kec:
+            queryset = Daerah.objects.annotate(length=Length('kode')).filter(length=13, kode__startswith=kec)
+            return queryset
+        else:
+            return self.queryset
