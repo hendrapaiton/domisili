@@ -4,5 +4,6 @@ from daerah import views
 
 urlpatterns = [
     path('propinsi/', views.Propinsi.as_view(), name='Propinsi'),
-    path('propinsi/<str:kode>/kabupaten/', views.Kabupaten.as_view(), name='Kabupaten'),
+    path('propinsi/<str:prop>/kabupaten/', views.Kabupaten.as_view(), name='Kabupaten'),
+    path('propinsi/<str:prop>/kabupaten/<str:kab>/kecamatan/', views.Kecamatan.as_view(), name='Kecamatan'),
 ]

@@ -15,6 +15,20 @@ class Kabupaten(ListAPIView):
     serializer_class = DaerahSerializer
 
     def get_queryset(self):
-        kode = self.kwargs.get('kode')
-        queryset = Daerah.objects.annotate(length=Length('kode')).filter(length=5, kode__startswith=kode)
+        prop = self.kwargs.get('prop')
+        queryset = Daerah.objects.annotate(length=Length('kode')).filter(length=5, kode__startswith=prop)
         return queryset
+
+
+class Kecamatan(ListAPIView):
+    lookup_field = 'kode'
+    serializer_class = DaerahSerializer
+
+    def get_queryset(self):
+        prop = self.kwargs.get('prop')
+        kab = self.kwargs.get('kab')
+        if prop in kab:
+            queryset = Daerah.objects.annotate(length=Length('kode')).filter(length=8, kode__startswith=kab)
+            return queryset
+        else:
+            return self.queryset
