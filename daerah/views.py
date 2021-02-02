@@ -1,5 +1,5 @@
 from django.db.models.functions import Length
-from rest_framework.generics import ListAPIView
+from rest_framework.generics import ListAPIView, RetrieveAPIView
 
 from daerah.models import Daerah
 from daerah.serializers import DaerahSerializer
@@ -47,3 +47,9 @@ class Kelurahan(ListAPIView):
             return queryset
         else:
             return self.queryset
+
+
+class Wilayah(RetrieveAPIView):
+    lookup_field = 'kode'
+    serializer_class = DaerahSerializer
+    queryset = Daerah.objects.all()

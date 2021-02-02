@@ -8,4 +8,5 @@ urlpatterns = [
     path('propinsi/<str:prop>/kabupaten/<str:kab>/kecamatan/', views.Kecamatan.as_view(), name='Kecamatan'),
     path('propinsi/<str:prop>/kabupaten/<str:kab>/kecamatan/<str:kec>/kelurahan/', views.Kelurahan.as_view(),
          name='kelurahan'),
+    path('wilayah/<str:kode>/', views.Wilayah.as_view(), name='Wilayah'),
 ]
