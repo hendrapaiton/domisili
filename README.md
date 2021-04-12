@@ -49,7 +49,7 @@ python manage.py runserver
 
 ### API Propinsi
 
-Ujicoba menggunakana utilitas *curl* dari command prompt (terminal).
+Ujicoba menggunakan utilitas *curl* dari command prompt (terminal).
 
 ```
 curl -H 'Content-Type:application/json' http://127.0.0.1:8000/api/propinsi/
