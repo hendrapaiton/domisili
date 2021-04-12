@@ -11,8 +11,8 @@ Indonesia.
 ### Dependensi
 
 * Python 3.8
-* Django 3.1.5
-* Django Rest Framework 3.12.2
+* Django 3.2
+* Django Rest Framework 3.12.4
 
 ### Instalasi
 
