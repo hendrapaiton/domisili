@@ -114,6 +114,24 @@ Contoh tampilan lain jika diakses dari browser (chrome).
 
 ![Browser Api Kabupaten](screenshots/browser-api-kelurahan.png)
 
+### API Wilayah
+
+Ujicoba menggunakan utilitas *curl* dari command prompt (terminal). Pada contoh ini kode kelurahan (35.13.12.2011 -
+Karanganyar). Api ini akan mengeluarkan informasi mulai dari kode, propinsi, kabupaten, kecamatan hingga kelurahan
+sesuai dengan kode wilayah yang diberikan. Semua kode wilayah bisa digunakan (asalkan kode tersebut valid dan tersedia).
+
+```
+curl -H 'Content-Type:application/json' http://127.0.0.1:8000/api/wilayah/35.13.12.2011/
+```
+
+Contoh tampilan ketika dijalankan di command prompt.
+
+![Curl Api Kabupaten](screenshots/curl-api-wilayah.png)
+
+Contoh tampilan lain jika diakses dari browser (chrome).
+
+![Browser Api Kabupaten](screenshots/browser-api-wilayah.png)
+
 ## Kontributor
 
 [@hendrapaiton](https://github.com/hendrapaiton/)
