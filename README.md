@@ -55,13 +55,30 @@ Ujicoba menggunakan utilitas *curl* dari command prompt (terminal).
 curl -H 'Content-Type:application/json' http://127.0.0.1:8000/api/propinsi/
 ```
 
-Contoh tampilan ketika dijalankan di command prompt
+Contoh tampilan ketika dijalankan di command prompt.
 
 ![Curl Api Propinsi](screenshots/curl-api-propinsi.png)
 
-Contoh tampilan lain jika diakses dari browser (chrome)
+Contoh tampilan lain jika diakses dari browser (chrome).
 
 ![Browser Api Propinsi](screenshots/browser-api-propinsi.png)
+
+### API Kabupaten
+
+Ujicoba menggunakan utilitas *curl* dari command prompt (terminal). Pada contoh ini kode kabupaten (35 - Jawa Timur)
+diakhiri dengan enpoint *kabupaten/*.
+
+```
+curl -H 'Content-Type:application/json' http://127.0.0.1:8000/api/propinsi/35/kabupaten/
+```
+
+Contoh tampilan ketika dijalankan di command prompt.
+
+![Curl Api Kabupaten](screenshots/curl-api-kabupaten.png)
+
+Contoh tampilan lain jika diakses dari browser (chrome).
+
+![Browser Api Kabupaten](screenshots/browser-api-kabupaten.png)
 
 ## Kontributor
 
