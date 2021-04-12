@@ -65,7 +65,7 @@ Contoh tampilan lain jika diakses dari browser (chrome).
 
 ### API Kabupaten
 
-Ujicoba menggunakan utilitas *curl* dari command prompt (terminal). Pada contoh ini kode kabupaten (35 - Jawa Timur)
+Ujicoba menggunakan utilitas *curl* dari command prompt (terminal). Pada contoh ini kode propinsi (35 - Jawa Timur)
 diakhiri dengan enpoint *kabupaten/*.
 
 ```
@@ -82,7 +82,7 @@ Contoh tampilan lain jika diakses dari browser (chrome).
 
 ### API Kecamatan
 
-Ujicoba menggunakan utilitas *curl* dari command prompt (terminal). Pada contoh ini kode kecamatan (35.13 - Probolinggo)
+Ujicoba menggunakan utilitas *curl* dari command prompt (terminal). Pada contoh ini kode kabupaten (35.13 - Probolinggo)
 diakhiri dengan enpoint *kecamatan/*.
 
 ```
@@ -99,7 +99,7 @@ Contoh tampilan lain jika diakses dari browser (chrome).
 
 ### API Kelurahan
 
-Ujicoba menggunakan utilitas *curl* dari command prompt (terminal). Pada contoh ini kode kelurahan (35.13.12 - Paiton)
+Ujicoba menggunakan utilitas *curl* dari command prompt (terminal). Pada contoh ini kode kecamatan (35.13.12 - Paiton)
 diakhiri dengan enpoint *kelurahan/*.
 
 ```
