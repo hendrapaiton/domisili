@@ -1,5 +1,7 @@
 from django.db.models.functions import Length
-from rest_framework.generics import ListAPIView, RetrieveAPIView
+from rest_framework.generics import ListAPIView
+from rest_framework.response import Response
+from rest_framework.views import APIView
 
 from daerah.models import Daerah
 from daerah.serializers import DaerahSerializer
@@ -49,7 +51,24 @@ class Kelurahan(ListAPIView):
             return self.queryset
 
 
-class Wilayah(RetrieveAPIView):
-    lookup_field = 'kode'
-    serializer_class = DaerahSerializer
-    queryset = Daerah.objects.all()
+class Wilayah(APIView):
+    permission_classes = []
+
+    @staticmethod
+    def get(request, kode):
+        data = kode.split('.')
+        wilayah = ['propinsi', 'kabupaten', 'kecamatan', 'kelurahan']
+        json = {'kode': kode}
+        k = ''
+
+        for i, d in enumerate(data):
+            if i > 0:
+                k = k + '.' + d
+            else:
+                k = d
+            try:
+                json[wilayah[i]] = Daerah.objects.get(kode=k).nama
+            except Daerah.DoesNotExist:
+                return Response({'status': 'Daerah tidak ditemukan'})
+
+        return Response(json)
