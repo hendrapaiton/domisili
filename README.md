@@ -16,10 +16,19 @@ Indonesia.
 
 ### Instalasi
 
-Instalasi semua paket depensi yang dibutuhkan oleh aplikasi dengan perintah
+Instalasi semua paket depensi yang dibutuhkan oleh aplikasi dengan perintah.
 
 ```
 pip install -r requirements.txt
+```
+
+### Memuat data daerah ke database
+
+Muat seluruh data daerah di Indonesia yang ada pada **db.json** ke dalam basisdata.
+
+```
+python manage.py migrate
+python manage.py loaddata db.json
 ```
 
 ### Eksekusi program
@@ -46,7 +55,7 @@ Proyek ini menggunakan lisensi [MIT](LICENSES).
 
 ## Penghargaan
 
-Inspirasi, Potongan Kode, dan lain-lain
+Inspirasi, Potongan Kode, dan lain-lain.
 
 * [cahyadsn-wilayah](https://github.com/cahyadsn/wilayah)
 * [Badan Pusat Statistik](https://sig-dev.bps.go.id/webgis/pencariankodenama)
