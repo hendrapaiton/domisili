@@ -82,7 +82,7 @@ Contoh tampilan lain jika diakses dari browser (chrome).
 
 ### API Kecamatan
 
-Ujicoba menggunakan utilitas *curl* dari command prompt (terminal). Pada contoh ini kode kematan (35.13 - Probolinggo)
+Ujicoba menggunakan utilitas *curl* dari command prompt (terminal). Pada contoh ini kode kecamatan (35.13 - Probolinggo)
 diakhiri dengan enpoint *kecamatan/*.
 
 ```
