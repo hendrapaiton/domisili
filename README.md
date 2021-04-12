@@ -97,6 +97,23 @@ Contoh tampilan lain jika diakses dari browser (chrome).
 
 ![Browser Api Kabupaten](screenshots/browser-api-kecamatan.png)
 
+### API Kelurahan
+
+Ujicoba menggunakan utilitas *curl* dari command prompt (terminal). Pada contoh ini kode kelurahan (35.13.12 - Paiton)
+diakhiri dengan enpoint *kelurahan/*.
+
+```
+curl -H 'Content-Type:application/json' http://127.0.0.1:8000/api/propinsi/35/kabupaten/35.13/kecamatan/35.13.12/kelurahan/
+```
+
+Contoh tampilan ketika dijalankan di command prompt.
+
+![Curl Api Kabupaten](screenshots/curl-api-kelurahan.png)
+
+Contoh tampilan lain jika diakses dari browser (chrome).
+
+![Browser Api Kabupaten](screenshots/browser-api-kelurahan.png)
+
 ## Kontributor
 
 [@hendrapaiton](https://github.com/hendrapaiton/)
