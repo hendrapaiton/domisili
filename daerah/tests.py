@@ -51,9 +51,8 @@ class DaerahTestCase(TestCase):
 
     def test_daerah_search_kecamatan_by_kabupaten(self):
         propinsi = Daerah.objects.annotate(length=Length('kode')).filter(length=2).order_by('?').first()
-        kabupaten = Daerah.objects.annotate(length=Length('kode')).filter(length=5,
-                                                                          kode__startswith=propinsi.kode).order_by(
-            '?').first()
+        kabupaten = Daerah.objects.annotate(length=Length('kode')) \
+            .filter(length=5, kode__startswith=propinsi.kode).order_by('?').first()
         kecamatan = Daerah.objects.annotate(length=Length('kode')).filter(length=8, kode__startswith=kabupaten.kode)
         self.assertTrue(kecamatan.exists())
         for kec in kecamatan:
@@ -61,12 +60,10 @@ class DaerahTestCase(TestCase):
 
     def test_daerah_search_desa_by_kecamatan(self):
         propinsi = Daerah.objects.annotate(length=Length('kode')).filter(length=2).order_by('?').first()
-        kabupaten = Daerah.objects.annotate(length=Length('kode')).filter(length=5,
-                                                                          kode__startswith=propinsi.kode).order_by(
-            '?').first()
-        kecamatan = Daerah.objects.annotate(length=Length('kode')).filter(length=8,
-                                                                          kode__startswith=kabupaten.kode).order_by(
-            '?').first()
+        kabupaten = Daerah.objects.annotate(length=Length('kode')) \
+            .filter(length=5, kode__startswith=propinsi.kode).order_by('?').first()
+        kecamatan = Daerah.objects.annotate(length=Length('kode')) \
+            .filter(length=8, kode__startswith=kabupaten.kode).order_by('?').first()
         kelurahan = Daerah.objects.annotate(length=Length('kode')).filter(length=13, kode__startswith=kecamatan.kode)
         self.assertTrue(kelurahan.exists())
         for kel in kelurahan:
