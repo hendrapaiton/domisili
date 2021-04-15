@@ -138,7 +138,7 @@ Contoh tampilan lain jika diakses dari browser (chrome).
 
 ## Lisensi
 
-Proyek ini menggunakan lisensi [MIT](LICENSES).
+Proyek ini menggunakan lisensi [MIT](LICENSE).
 
 ## Penghargaan
 
